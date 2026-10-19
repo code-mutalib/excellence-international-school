@@ -4,13 +4,12 @@ import { Menu, Phone, X } from "lucide-react";
 import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { NAV, SCHOOL } from "@/lib/site-data";
 import { cn } from "@/lib/utils";
+import crest from "@/assets/logo-crest.png";
 
 export function Logo({ className }: { className?: string }) {
   return (
     <Link to="/" className={cn("flex min-w-0 items-center gap-3", className)} aria-label={`${SCHOOL.name} home`}>
-      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-primary font-display text-xl font-semibold text-primary-foreground">
-        E
-      </span>
+      <img src={crest} alt="" width={48} height={48} className="h-12 w-12 shrink-0 object-contain" />
       <span className="min-w-0 leading-none">
         <span className="block truncate font-display text-xl font-semibold text-ink">Excellence</span>
         <span className="block truncate text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
