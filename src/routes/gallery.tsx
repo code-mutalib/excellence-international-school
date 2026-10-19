@@ -42,9 +42,9 @@ function Gallery() {
       </section>
       <Dialog open={open !== null} onOpenChange={(o) => !o && setOpen(null)}>
         <DialogContent className="max-w-5xl border-0 bg-surface p-2">
-          <DialogTitle className="sr-only">{open !== null ? ITEMS[open].alt : "Image"}</DialogTitle>
-          {open !== null && <img src={ITEMS[open].src} alt={ITEMS[open].alt} className="max-h-[80vh] w-full rounded object-contain" />}
-          {open !== null && <p className="px-3 pb-2 text-sm">{ITEMS[open].alt}</p>}
+          <DialogTitle className="sr-only">{open !== null ? ITEMS[open]?.alt : "Image"}</DialogTitle>
+          {open !== null && <img src={ITEMS[open]!.src} alt={ITEMS[open]!.alt} className="max-h-[80vh] w-full rounded object-contain" />}
+          {open !== null && <p className="px-3 pb-2 text-sm">{ITEMS[open]!.alt}</p>}
         </DialogContent>
       </Dialog>
     </>

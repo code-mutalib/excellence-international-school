@@ -29,7 +29,7 @@ const STEPS = [
 
 const EMPTY: AdmissionForm = { studentName: "", dob: "", grade: "", parentName: "", email: "", phone: "", message: "" };
 
-function Field({ id, label, error, children }: { id: string; label: string; error?: string; children: React.ReactNode }) {
+function Field({ id, label, error, children }: { id: string; label: string; error?: string | undefined; children: React.ReactNode }) {
   return (
     <div>
       <label htmlFor={id} className="mb-2 block text-sm font-medium text-ink">{label}</label>
