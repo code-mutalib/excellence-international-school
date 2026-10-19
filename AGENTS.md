@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Site content (nav, programs, events, news, fees) lives in `src/lib/site-data.ts`; pages read from it so content can later move to a backend without touching layouts.
+- Shared layout/typography/button styles are `@utility` classes in `src/styles.css` (container-x, section-y, text-h1, btn-primary, field); use them instead of ad hoc classes.
