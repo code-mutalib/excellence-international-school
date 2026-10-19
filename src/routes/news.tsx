@@ -17,7 +17,8 @@ export const Route = createFileRoute("/news")({
 });
 
 function News() {
-  const [lead, ...rest] = NEWS;
+  const lead = NEWS[0]!;
+  const rest = NEWS.slice(1);
   return (
     <>
       <PageHero eyebrow="News & announcements" title={<>Stories from <span className="italic text-primary">our school.</span></>} />
